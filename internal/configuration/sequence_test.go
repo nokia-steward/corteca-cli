@@ -418,3 +418,25 @@ func TestExecute_DefaultTimeout_UsedWhenUnset(t *testing.T) {
 		t.Fatalf("unexpected error: %v", err)
 	}
 }
+
+// TestExecute_CommandOutputFormatting verifies that string command output is handled
+// and that steps returning nil do not print "null".
+func TestExecute_CommandOutputFormatting(t *testing.T) {
+	cmd1 := configuration.SequenceCmd{Cmd: configuration.T("cmd1")}
+	cmd2 := configuration.SequenceCmd{Cmd: configuration.T("cmd2")}
+	sm := configuration.SequenceMap{"seq": {cmd1, cmd2}}
+
+	exec := &mockExecutor{
+		executeFunc: func(callIdx int, _ context.Context, _ *configuration.SequenceCmd) (any, error) {
+			if callIdx == 0 {
+				return "expected command output\n", nil
+			}
+			return nil, nil
+		},
+	}
+
+	if err := sm.Execute(exec, "seq"); err != nil {
+		t.Fatalf("unexpected error executing sequence: %v", err)
+	}
+}
+

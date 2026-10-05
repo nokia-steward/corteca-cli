@@ -11,6 +11,7 @@ import (
 	"fmt"
 	"os"
 	"regexp"
+	"strings"
 	"time"
 
 	"gopkg.in/yaml.v3"
@@ -127,10 +128,30 @@ func (sm *SequenceMap) executeSequenceSteps(executor CommandExecutor, seqName st
 			return fmt.Errorf("sequence '%s' failed at step %d: %w", seqName, idx+1, err)
 		}
 		// TODO: provide option to suppress output
-		tui.SetOutputColor(tui.CBlue, os.Stdout)
-		enc := yaml.NewEncoder(os.Stdout)
-		enc.Encode(res)
-		tui.ResetOutputColor(os.Stdout)
+		if res != nil {
+			tui.SetOutputColor(tui.CBlue, os.Stdout)
+			switch v := res.(type) {
+			case string:
+				if len(strings.TrimSpace(v)) > 0 {
+					if !strings.HasSuffix(v, "\n") {
+						v += "\n"
+					}
+					fmt.Print(v)
+				}
+			case fmt.Stringer:
+				s := v.String()
+				if len(strings.TrimSpace(s)) > 0 {
+					if !strings.HasSuffix(s, "\n") {
+						s += "\n"
+					}
+					fmt.Print(s)
+				}
+			default:
+				enc := yaml.NewEncoder(os.Stdout)
+				enc.Encode(res)
+			}
+			tui.ResetOutputColor(os.Stdout)
+		}
 	}
 	return nil
 }
