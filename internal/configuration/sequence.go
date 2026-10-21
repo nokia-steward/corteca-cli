@@ -6,7 +6,7 @@ package configuration
 
 import (
 	"context"
-	"github.com/nokia/corteca-cli/internal/tui"
+	"github.com/nokia-steward/corteca-cli/internal/tui"
 	"errors"
 	"fmt"
 	"os"

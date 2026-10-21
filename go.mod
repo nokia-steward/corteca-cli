@@ -1,4 +1,4 @@
-module github.com/nokia/corteca-cli
+module github.com/nokia-steward/corteca-cli
 
 go 1.21.0
 

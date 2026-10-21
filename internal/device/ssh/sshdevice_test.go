@@ -19,8 +19,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/nokia/corteca-cli/internal/configuration"
-	devssh "github.com/nokia/corteca-cli/internal/device/ssh"
+	"github.com/nokia-steward/corteca-cli/internal/configuration"
+	devssh "github.com/nokia-steward/corteca-cli/internal/device/ssh"
 
 	"golang.org/x/crypto/ssh"
 	"gopkg.in/yaml.v3"

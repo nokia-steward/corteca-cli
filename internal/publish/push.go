@@ -6,9 +6,9 @@ package publish
 
 import (
 	"compress/gzip"
-	"github.com/nokia/corteca-cli/internal/configuration"
-	"github.com/nokia/corteca-cli/internal/fsutil"
-	"github.com/nokia/corteca-cli/internal/tui"
+	"github.com/nokia-steward/corteca-cli/internal/configuration"
+	"github.com/nokia-steward/corteca-cli/internal/fsutil"
+	"github.com/nokia-steward/corteca-cli/internal/tui"
 	"crypto/tls"
 	"fmt"
 	"io"

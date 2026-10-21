@@ -6,7 +6,7 @@ package messages_test
 
 import (
 	"bytes"
-	"github.com/nokia/corteca-cli/internal/device/cwmp/messages"
+	"github.com/nokia-steward/corteca-cli/internal/device/cwmp/messages"
 	"testing"
 
 	"github.com/stretchr/testify/assert"

@@ -6,9 +6,9 @@ package messages_test
 
 import (
 	"bytes"
-	"github.com/nokia/corteca-cli/internal/configuration"
-	c "github.com/nokia/corteca-cli/internal/configuration"
-	"github.com/nokia/corteca-cli/internal/device/cwmp/messages"
+	"github.com/nokia-steward/corteca-cli/internal/configuration"
+	c "github.com/nokia-steward/corteca-cli/internal/configuration"
+	"github.com/nokia-steward/corteca-cli/internal/device/cwmp/messages"
 	"encoding/xml"
 	"testing"
 

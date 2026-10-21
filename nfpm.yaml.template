@@ -3,7 +3,7 @@ version: ${VERSION}
 description: Corteca Developer Toolkit cli tool
 vendor: Nokia
 maintainer: Manolis Paterakis <manolis.paterakis@nokia.com>
-homepage: https://github.com/nokia/corteca-cli
+homepage: https://github.com/nokia-steward/corteca-cli
 license: BSD-3-Clause
 
 arch: ${GOARCH}

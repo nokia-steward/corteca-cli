@@ -4,7 +4,7 @@
 
 package main
 
-import "github.com/nokia/corteca-cli/cmd"
+import "github.com/nokia-steward/corteca-cli/cmd"
 
 func main() {
 	cmd.Execute()

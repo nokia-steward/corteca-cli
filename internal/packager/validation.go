@@ -5,8 +5,8 @@
 package packager
 
 import (
-	"github.com/nokia/corteca-cli/internal/configuration"
-	specs "github.com/nokia/corteca-cli/internal/configuration/runtimeSpec"
+	"github.com/nokia-steward/corteca-cli/internal/configuration"
+	specs "github.com/nokia-steward/corteca-cli/internal/configuration/runtimeSpec"
 	"strings"
 	"io"
 	"bufio"
