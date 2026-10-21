@@ -5,7 +5,7 @@
 package messages
 
 import (
-	c "github.com/nokia/corteca-cli/internal/configuration"
+	c "github.com/nokia-steward/corteca-cli/internal/configuration"
 	"encoding/xml"
 )
 

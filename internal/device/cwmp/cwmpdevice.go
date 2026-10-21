@@ -6,10 +6,10 @@ package cwmp
 
 import (
 	"context"
-	"github.com/nokia/corteca-cli/internal/configuration"
-	"github.com/nokia/corteca-cli/internal/device"
-	"github.com/nokia/corteca-cli/internal/device/cwmp/messages"
-	"github.com/nokia/corteca-cli/internal/tui"
+	"github.com/nokia-steward/corteca-cli/internal/configuration"
+	"github.com/nokia-steward/corteca-cli/internal/device"
+	"github.com/nokia-steward/corteca-cli/internal/device/cwmp/messages"
+	"github.com/nokia-steward/corteca-cli/internal/tui"
 	"encoding/xml"
 	"errors"
 

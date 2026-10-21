@@ -5,7 +5,7 @@
 package messages
 
 import (
-	"github.com/nokia/corteca-cli/internal/configuration"
+	"github.com/nokia-steward/corteca-cli/internal/configuration"
 	"encoding/xml"
 	"fmt"
 	"strings"

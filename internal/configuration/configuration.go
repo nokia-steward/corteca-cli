@@ -23,10 +23,10 @@ import (
 	"strconv"
 	"strings"
 
-	specs "github.com/nokia/corteca-cli/internal/configuration/runtimeSpec"
-	"github.com/nokia/corteca-cli/internal/configuration/templating"
-	"github.com/nokia/corteca-cli/internal/fsutil"
-	"github.com/nokia/corteca-cli/internal/tui"
+	specs "github.com/nokia-steward/corteca-cli/internal/configuration/runtimeSpec"
+	"github.com/nokia-steward/corteca-cli/internal/configuration/templating"
+	"github.com/nokia-steward/corteca-cli/internal/fsutil"
+	"github.com/nokia-steward/corteca-cli/internal/tui"
 
 	"github.com/spf13/afero"
 	"github.com/vishvananda/netlink"

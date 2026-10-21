@@ -5,9 +5,9 @@
 package cmd
 
 import (
-	"github.com/nokia/corteca-cli/internal/configuration"
-	"github.com/nokia/corteca-cli/internal/configuration/templating"
-	"github.com/nokia/corteca-cli/internal/tui"
+	"github.com/nokia-steward/corteca-cli/internal/configuration"
+	"github.com/nokia-steward/corteca-cli/internal/configuration/templating"
+	"github.com/nokia-steward/corteca-cli/internal/tui"
 	"path/filepath"
 
 	"github.com/spf13/afero"

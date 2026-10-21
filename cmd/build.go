@@ -5,11 +5,11 @@
 package cmd
 
 import (
-	"github.com/nokia/corteca-cli/internal/builder"
-	"github.com/nokia/corteca-cli/internal/configuration"
-	"github.com/nokia/corteca-cli/internal/fsutil"
-	"github.com/nokia/corteca-cli/internal/packager"
-	"github.com/nokia/corteca-cli/internal/tui"
+	"github.com/nokia-steward/corteca-cli/internal/builder"
+	"github.com/nokia-steward/corteca-cli/internal/configuration"
+	"github.com/nokia-steward/corteca-cli/internal/fsutil"
+	"github.com/nokia-steward/corteca-cli/internal/packager"
+	"github.com/nokia-steward/corteca-cli/internal/tui"
 	"fmt"
 	"os"
 	"path/filepath"
