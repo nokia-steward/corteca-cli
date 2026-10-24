@@ -261,12 +261,16 @@ func TestSSHDevice_ExecuteCommand_OutputCaptured(t *testing.T) {
 	defer dev.Close()
 
 	cmd := mustSequenceCmd(t, "cmd: echo-test")
-	if _, err := dev.ExecuteCommand(context.Background(), cmd); err != nil {
+	res, err := dev.ExecuteCommand(context.Background(), cmd)
+	if err != nil {
 		t.Fatalf("unexpected error executing command: %v", err)
 	}
 
 	if !strings.Contains(logBuf.String(), want) {
 		t.Errorf("log writer: expected to contain %q, got %q", want, logBuf.String())
+	}
+	if outStr, ok := res.(string); !ok || !strings.Contains(outStr, want) {
+		t.Errorf("ExecuteCommand result: expected string containing %q, got %v", want, res)
 	}
 }
 

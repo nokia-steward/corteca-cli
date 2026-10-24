@@ -135,10 +135,11 @@ func (d *SSHDevice) executeCommandString(ctx context.Context, cmd string) (any, 
 	case err := <-done:
 		var exitError *stdssh.ExitError
 		if errors.As(err, &exitError) {
-			return output, fmt.Errorf("exit code (%d)", exitError.ExitStatus())
-		} else {
+			return output.String(), fmt.Errorf("exit code (%d)", exitError.ExitStatus())
+		} else if err != nil {
 			return nil, err
 		}
+		return output.String(), nil
 
 	case <-ctx.Done():
 		_ = session.Signal(ssh.SIGKILL)
